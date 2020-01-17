@@ -50,10 +50,11 @@ print(f3(8))  # Should print 9
 # Google "python keyword arguments".
 
 
-def f4(**kwargs):
-    for key in kwargs:
-        print(key)
-        # print(f'key: {key}, value: {value}')
+def f4(obj={}, **kwargs):
+    if len(obj) != 0 and len(kwargs) == 0:
+        kwargs = obj
+    for key, value in kwargs.items():
+        print(f'key: {key}, value: {value}')
 
 
 # Should print

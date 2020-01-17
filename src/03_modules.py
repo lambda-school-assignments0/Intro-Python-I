@@ -12,6 +12,9 @@ import sys
 for line in sys.argv:
     print(line)
 
+# Alternative nice one-liner answer:
+# print(*sys.argv, sep="\n")
+
 # Print out the OS platform you're using:
 print(sys.getwindowsversion())
 
