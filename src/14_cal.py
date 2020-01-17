@@ -22,3 +22,25 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+def get_calendar(*args):
+    if args[0] == '':
+        # print calendar for current month
+        print(datetime)
+        print(calendar.prmonth(datetime.year, datetime.month))
+    elif len(args) == 1:
+        # print calendar for given month
+        print("error")
+        print(len(args), args)
+    elif len(args) == 2:
+        # print calendar for given month/year
+        print("error")
+        print(len(args), args)
+    else:
+        # print usage statement
+        print("error")
+        print(len(args), args)
+
+
+get_calendar(input("Input: "))
